@@ -1,0 +1,14 @@
+Debug                                   False
+InputFilePath                           ./*.root
+OutputFileName                          ./analysis.root
+CalculateOpticalFunctions               False
+CalculateOpticalFunctionsFileName       ./ana_1.dat
+# Object  		Tree Name Histogram Name  # of Bins  Binning             Variable		            Selection
+Histogram1D  		Event.    X         {100}      {-1.5:1.5}            DR1.x	      		     1
+Histogram1D  		Event.    Y     {100}      {-1.5:1.5}            DR1.y	      		     1
+Histogram1D  		Event.    X         {100}      {-1.5:1.5}            QF3.x	      		     1
+Histogram1D  		Event.    Y     {100}      {-1.5:1.5}            QF3.y	      		     1
+Histogram1D  		Event.    X         {100}      {-1.5:1.5}            QD6.x	      		     1
+Histogram1D  		Event.    Y     {100}      {-1.5:1.5}            QD6.y	      		     1
+Histogram1D  		Event.    X         {100}      {-1.5:1.5}            CH1.x	      		     1
+Histogram1D  		Event.    Y     {100}      {-1.5:1.5}            CH1.y	      		     1

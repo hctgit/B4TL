@@ -1,0 +1,34 @@
+!include T9_2_components.gmad;
+include T9_2_componentsVacuum.gmad;
+include T9_2_sequence.gmad;
+include target.gmad;
+
+lattice: line = (t9);
+use, period=lattice;
+
+beam,	particle="proton", 
+	energy=10.*GeV, 
+        distrType = "gaussmatrix",
+        sigma11 = 100*um,
+        sigma22 = 3*um,
+        sigma33 = 50*um,
+        sigma44 = 1.4*um,
+        sigma55 = 1e-12
+        sigma66 = 1e-4,
+        sigma12 = 1e-2,
+        sigma34 = 1.4e-3;
+
+option,
+	!physicsList="em",
+        !physicsList="em hadronic_elastic ftfp_bert qgsp_bic decay",
+	!physicsList="em em_extra hadronic hadronic_elastic decay",
+	!includeFringeFields=0,
+	tunnelRadius=1*m, 
+	beampipeRadius=20*cm, 
+	samplerDiameter=1*m, 
+	beampipeThickness=5*mm, 
+	outerDiameter=0.7*m,
+	stopSecondaries=1,
+	ngenerate=100;
+
+sample, all;

@@ -1,0 +1,14 @@
+! Tue, 07 Mar 2017 16:11:07 +0000
+! pybdsim.Builder 
+! BEAM DEFINITION 
+
+beam,	particle="pi+", 
+	sigmaE=0.0, 
+	!energy=15.0293164992*GeV, 
+	energy=5.0*GeV, 
+	distrType="gauss",
+	sigmaYp=1.0*mrad,	
+	sigmaXp=1.0*mrad, 
+	sigmaY=0.0*mm, 
+	sigmaX=0.0*mm, 
+	sigmaT=0.0;

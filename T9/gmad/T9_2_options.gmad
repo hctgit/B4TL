@@ -1,0 +1,14 @@
+! Tue, 07 Mar 2017 16:11:07 +0000
+! pybdsim.Builder 
+! OPTIONS DEFINITION 
+
+option,	
+	!physicsList="em em_extra hadronic hadronic_elastic muon decay",
+	physicsList="em em_extra hadronic hadronic_elastic decay",
+	!includeFringeFields=1, 
+	!stopTracks=1,
+	tunnelRadius=1*m, 
+	beampipeRadius=20*cm, 
+	samplerDiameter=1*m, 
+	beampipeThickness=5*mm, 
+	outerDiameter=60*cm;

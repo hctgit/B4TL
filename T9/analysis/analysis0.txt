@@ -1,0 +1,31 @@
+Debug                                   False
+InputFilePath                           ./*.root
+OutputFileName                          ./analysis.root
+CalculateOpticalFunctions               False
+CalculateOpticalFunctionsFileName       ./ana_1.dat
+# Object  		Tree Name Histogram Name  # of Bins  Binning             Variable		            Selection
+Histogram1D  		Event.    ProtonE         {100}      {0.5:1.5}            CH1.energy      		     CH1.partID==2212
+Histogram1D  		Event.    antiProtonE     {100}      {0.5:1.5}            CH1.energy      		     CH1.partID==-2212
+Histogram1D  		Event.    PionsE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==211
+Histogram1D  		Event.    antiPionsE     {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==-211
+Histogram1D  		Event.    KaonsE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==321
+Histogram1D  		Event.    antiKaonsE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==-321
+Histogram1D  		Event.    electronE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==-11
+Histogram1D  		Event.    positronE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==11
+Histogram1D  		Event.    muonE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==-13
+Histogram1D  		Event.    antimuonE         {100}      {0.0:1.5}            CH1.energy      		     CH1.partID==13
+Histogram1D  		Event.    ProtonP         {100}      {0.5:1.5}            CH1.zp      		             CH1.partID==2212
+Histogram1D  		Event.    antiProtonP     {100}      {0.5:1.5}            CH1.zp      		             CH1.partID==-2212
+Histogram1D  		Event.    PionsP         {100}      {0.0:1.5}            CH1.zp      		             CH1.partID==211
+Histogram1D  		Event.    antiPionsP     {100}      {0.0:1.5}            CH1.zp      		             CH1.partID==-211
+Histogram1D  		Event.    KaonsP         {100}      {0.0:1.5}            CH1.zp      		             CH1.partID==321
+Histogram1D  		Event.    antiKaonsP         {100}      {0.0:1.5}            CH1.zp      		     CH1.partID==-321
+Histogram1D  		Event.    electronP         {100}      {0.0:1.5}            CH1.zp      		     CH1.partID==-11
+Histogram1D  		Event.    positronP         {100}      {0.0:1.5}            CH1.zp      		     CH1.partID==11
+Histogram1D  		Event.    muonP         {100}      {0.0:1.5}            CH1.zp      		             CH1.partID==-13
+Histogram1D  		Event.    antimuonP         {100}      {0.0:1.5}            CH1.zp      		     CH1.partID==13
+Histogram1D  		Event.    allToF         {100}      {0.0:200}            CH1.T      		             1
+Histogram1D  		Event.    electronToF         {100}      {0.0:150}            CH1.T        	             CH1.partID==-11
+Histogram1D  		Event.    pionToF         {100}      {0.0:150}            CH1.T      		             CH1.partID==211
+Histogram1D  		Event.    kaonToF         {100}      {0.0:150}            CH1.T      		             CH1.partID==321
+Histogram1D  		Event.    protonToF         {100}      {0.0:150}            CH1.T      		             CH1.partID==2212

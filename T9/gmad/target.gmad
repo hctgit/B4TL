@@ -1,0 +1,17 @@
+DR0: drift, l=1.0;
+
+blockBe: rcol, l=200.*mm, material="beryllium", xsize=0.*mm, ysize=0.*mm, outerDiameter=100.*mm;
+blockAl200mm: rcol, l=200.*mm, material="aluminium", xsize=0.*mm, ysize=0.*mm, outerDiameter=100.*mm;
+blockAl100mm: rcol, l=100.*mm, material="aluminium", xsize=0.*mm, ysize=0.*mm, outerDiameter=100.*mm;
+blockAl20mm: rcol, l=20.*mm, material="aluminium", xsize=0.*mm, ysize=0.*mm, outerDiameter=100.*mm;
+blockW: rcol, l=3.*mm, material="tungsten", xsize=0.*mm, ysize=0.*mm, outerDiameter=100.*mm;
+
+target1: line = (blockBe,blockW);
+target2: line = (blockAl100mm,blockW);
+target3: line = (blockAl200mm);
+target4: line = ();
+target5: line = (blockAl20mm);
+
+l0: line = (target1);
+
+

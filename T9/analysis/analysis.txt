@@ -1,0 +1,14 @@
+Debug					0
+InputFilePath				./*.root
+OutputFileName				./output.root
+CalculateOpticalFunctions		1
+CalculateOpticalFunctionsFileName	./output.dat
+# Object       treeName		Histogram Name         # Bins	   Binning        		variable	           selection
+Histogram1D	Event.	 all 			{20}	{9.25:10.75}		CH3.energy	1
+Histogram1D	Event.	 primaryProtons 	{20}	{9.25:10.75}		CH3.energy	CH3.partID==2212&&CH3.parentID==0
+Histogram1D	Event.	 secondaryProtonsP 	{20}	{9.25:10.75}		CH3.energy	CH3.partID==2212&&CH3.parentID!=0
+Histogram1D	Event.	 positrons 		{20}	{9.25:10.75}		CH3.energy	CH3.partID==11
+Histogram1D	Event.	 muonsP 		{20}	{9.25:10.75}		CH3.energy	CH3.partID==13
+Histogram1D	Event.	 pionsP 		{20}	{9.25:10.75}		CH3.energy	CH3.partID==211
+Histogram1D	Event.	 kaons 			{20}	{9.25:10.75}		CH3.energy	CH3.partID==321
+
