@@ -1,0 +1,976 @@
+0
+
+ tttttttttttt  rrrrrrrrrrr    aaaaaaaaaa   nn        nn   ssssssssss   ppppppppppp   oooooooooooo  rrrrrrrrrrr   tttttttttttt
+ tttttttttttt  rrrrrrrrrrrr  aaaaaaaaaaaa  nnn       nn  ssssssssssss  pppppppppppp  oooooooooooo  rrrrrrrrrrrr  tttttttttttt
+      tt       rr        rr  aa        aa  nnnn      nn  ss        ss  pp        pp  oo        oo  rr        rr       tt
+      tt       rr        rr  aa        aa  nn nn     nn  ss            pp        pp  oo        oo  rr        rr       tt
+      tt       rr        rr  aa        aa  nn  nn    nn  sss           pp        pp  oo        oo  rr        rr       tt
+      tt       rrrrrrrrrrrr  aaaaaaaaaaaa  nn   nn   nn   sssssssss    pppppppppppp  oo        oo  rrrrrrrrrrrr       tt
+      tt       rrrrrrrrrrr   aaaaaaaaaaaa  nn    nn  nn    sssssssss   ppppppppppp   oo        oo  rrrrrrrrrrr        tt
+      tt       rr    rr      aa        aa  nn     nn nn           sss  pp            oo        oo  rr    rr           tt
+      tt       rr     rr     aa        aa  nn      nnnn            ss  pp            oo        oo  rr     rr          tt
+      tt       rr      rr    aa        aa  nn       nnn  ss        ss  pp            oo        oo  rr      rr         tt
+      tt       rr       rr   aa        aa  nn        nn  ssssssssssss  pp            oooooooooooo  rr       rr        tt
+      tt       rr        rr  aa        aa  nn         n   ssssssssss   pp            oooooooooooo  rr        rr       tt
+
+0
+
+ tttttttttttt       11         00000000    tttttttttttt  rrrrrrrrrrr    aaaaaaaaaa   nn        nn   ssssssssss
+ tttttttttttt      111        0000000000   tttttttttttt  rrrrrrrrrrrr  aaaaaaaaaaaa  nnn       nn  ssssssssssss
+      tt          1111       00        00       tt       rr        rr  aa        aa  nnnn      nn  ss        ss
+      tt            11       00        00       tt       rr        rr  aa        aa  nn nn     nn  ss
+      tt            11       00        00       tt       rr        rr  aa        aa  nn  nn    nn  sss
+      tt            11       00        00       tt       rrrrrrrrrrrr  aaaaaaaaaaaa  nn   nn   nn   sssssssss
+      tt            11       00        00       tt       rrrrrrrrrrr   aaaaaaaaaaaa  nn    nn  nn    sssssssss
+      tt            11       00        00       tt       rr    rr      aa        aa  nn     nn nn           sss
+      tt            11       00        00       tt       rr     rr     aa        aa  nn      nnnn            ss
+      tt            11       00        00       tt       rr      rr    aa        aa  nn       nnn  ss        ss
+      tt        1111111111    0000000000        tt       rr       rr   aa        aa  nn        nn  ssssssssssss
+      tt        1111111111     00000000         tt       rr        rr  aa        aa  nn         n   ssssssssss
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+      11             444                     00000000     2222222222                   00000000     6666666666
+     111            4444              //    0000000000   222222222222           //    0000000000   666666666666
+    1111           44 44             //    00        00  22        22          //    00        00  66        66
+      11          44  44            //     00        00            22         //     00        00  66
+      11         44   44           //      00        00            22        //      00        00  66
+      11        44444444444       //       00        00           22        //       00        00  66666666666
+      11       444444444444      //        00        00         22         //        00        00  666666666666
+      11              44        //         00        00       22          //         00        00  66        66
+      11              44       //          00        00     22           //          00        00  66        66
+      11              44      //           00        00   22            //           00        00  66        66
+  1111111111          44     //             0000000000   222222222222  //             0000000000   666666666666
+  1111111111          44                     00000000    222222222222                  00000000     6666666666
+
+0
+1TRANSPORT, VERSION LINUX APR 2000. FOR MORE INFORMATION CONSULT THE NEW WRITE-UP.
+
+ NEW MISALIGNMENT FEATURES MAY BE ACTIVATED BY MEANS OF CODE ON MISALIGNMENT CARD
+
+ A 1 IN THE TENS POSITION CAUSES THE RESULTS OF THE MISALIGNMENT TO BE PLACED IN A MISALIGNMENT TABLE
+      WHICH IS PRINTED WHEREVER A 13. 8. CARD IS INSERTED
+
+ A 4 IN THE ONES POSITION MISALIGNS ALL SUBSEQUENT BEND MAGNETS, UP TO TEN
+
+ A 5 IN THE ONES POSITION MISALIGNS ALL SUBSEQUENT QUADRUPOLES, UP TO TEN
+
+ A 3 IN THE ONES POSITION MISALIGNS ALL SUBSEQUENT BENDS OR QUADS, UP TO TEN
+
+0THE UNITS FOR BEND ANGLE, POLE FACE ROTATION ANGLE, AND LAYOUT ANGLE MAY BE CHANGED VIA A 15. 7. ENTRY
+
+ THE ANGLES OF THE REFERENCE TRAJECTORY NOW APPEAR IN THE COORDINATE LAYOUT
+
+
+ THE PRINTING OF PHYSICAL PARAMETERS FOR ELEMENTS MAY BE SUPPRESSED BY A 13. 17. CARD
+
+ ONLY VARIED ELEMENTS OR CONSTRAINTS WILL BE PRINTED IF A 13. 18. CARD IS INSERTED
+
+ THE TRANSFER AND BEAM MATRICES WILL OCCUPY A SINGLE LINE IF A 13. 19. CARD IS INSERTED
+
+ THE BEAM MATRIX IS PRINTED AFTER EACH ELEMENT ONLY IF ACTIVATED VIA A 13. 3. CARD
+
+ THE TRANSFER MATRIX MAY BE PRINTED AFTER EACH ELEMENT BY USING A 13. 6. CARD
+
+
+ THE BEAM CENTROID MAY BE VARIED
+
+0THE INDICATOR VALUE IS NOW INTERPRETED AS FOLLOWS (X STANDS FOR ANY DIGIT):
+
+   INDICATOR = XX0   READ A NEW SYSTEM
+
+   INDICATOR = XX1   MODIFY PREVIOUS SYSTEM
+
+   INDICATOR = XX2   MODIFY PREVIOUS SYSTEM AND SUPPRESS LISTING OF INPUT CARDS
+
+   INDICATOR = X0X   PRINT DATA FOR CURRENT SYSTEM
+
+   INDICATOR = X1X   SUPPRESS DATA FOR CURRENT SYSTEM
+
+   INDICATOR = 0XX   EXECUTE RUN THRU UNFITTED SYSTEM
+
+   INDICATOR = 1XX   SUPPRESS RUN THRU UNFITTED SYSTEM
+
+ A NEGATIVE INDICATOR VALUE IS INTERPRETED AS 111
+
+0THE FLOOR COORDINATES MAY BE CONSTRAINED OR VARIED
+0THE CONSTRAINT CARD IS OF THE FORM:
+010.  8.  INDEX  DESIRED VALUE  TOLERANCE  ;
+0THE INDEX IS 1 TO 6 INDICATING X, Y, Z, THETA, PHI AND PSI RESPECTIVELY
+1"TRANSPORT_RUN      "
+0  100
+     1.000000       "BEAM"      0.20000     4.85000     0.20000    12.40000     0.00000     0.00000     7.00000;
+    -7.             "AXE "      0.00000     0.00000     0.00000     0.00000     0.00000     1.00000;
+   -17.             "seco" ;
+    13.                        19.00000;
+    13.                         3.00000;
+     3.0            "PG3H"      0.00000;
+     3.0            "^11."      0.00000;
+    -8.             "SORG"   2076.40698    -0.16620  2182.18262  2433.72607     0.03824     0.00000     0.00000;
+     3.0            "TV7 "      0.00000;
+     3.0                        7.25000;
+     5.00           "QDE1"      0.90000    -8.95183    10.00000;
+     3.0                        2.30000;
+     5.00           "QFO2"      0.90000     9.95687    10.00000;
+     3.0                        0.76000;
+    16.00                       4.00000    17.00000;
+    16.00                       5.00000     7.00000;
+    20.0            "BHZ1"    180.00000;
+     2.0            "BHZ1"      5.72958;
+     4.000          "BHZ1"      2.18000    14.99508     0.00000;
+     2.0            "BHZ1"      2.29183;
+    20.0            "BHZ1"   -180.00000;
+     3.0                        0.40200;
+     3.0            "STP1"      0.68000;
+     3.0                        1.10400;
+     3.0                        0.00000;
+     3.0            "MCH1"      0.90000;
+     3.0                        0.00000;
+    10.0            "FOCi"      2.00000     1.00000     0.00000     0.00010;
+    10.2            "MINi"      1.00000     1.00000     0.10000     0.10000;
+     3.0                        0.00000;
+     3.0                        0.23900;
+     3.0                        0.00000;
+     3.0                        0.60000;
+    10.0            "FOCi"      4.00000     3.00000     0.00000     0.00010;
+    10.2            "MINi"      3.00000     3.00000     0.10000     0.10000;
+     3.0                       -0.60000;
+     5.00           "QFO3"      0.84000     7.50000     5.00000;
+     3.0                        0.10000;
+     3.0            "drif"      0.55000;
+    20.0            "BHZ2"    180.00000;
+     2.0            "BHZ2"      4.01071;
+     4.000          "BHZ2"      2.60000    12.57265     0.00000;
+     2.0            "BHZ2"      4.01071;
+    20.0            "BHZ2"   -180.00000;
+     3.0                        0.14000;
+     3.0            "drif"      2.00000;
+     3.0                        0.83000;
+     3.0                        0.08000;
+    16.00                       4.00000    26.00000;
+    16.00                       5.00000     7.00000;
+    20.0            "BHZ3"    180.00000;
+     2.0            "BHZ3"      1.35103;
+     4.000          "bhz3"      1.16000    10.00000     0.00000;
+     2.0            "BHZ3"      1.35103;
+    20.0            "BHZ3"   -180.00000;
+     3.0            "drif"      0.72000;
+   -10.             "FCH "     -1.00000     6.00000     0.00000     0.00010;
+     5.00           "QFO4"      1.16000     8.11469    10.00000;
+     3.0                        0.34000;
+     3.0            "MCV1"      0.58000;
+     3.0                        0.34000;
+     5.00           "QDE5"      1.16000   -10.01776    10.00000;
+     3.0                        0.62500;
+   -10.             "FCH "     -1.00000     6.00000     0.00000     0.00010;
+   -20.                         0.70440;
+    20.0            "BVT1"     90.70439;
+     2.0            "BVT1"      1.03737;
+     4.000          "BVT1"      1.18000     7.16525     0.00000;
+     2.0            "BVT1"      1.03737;
+    20.0            "BVT1"    -90.00000;
+     3.0                        0.00000;
+     3.0            "CH1I"      0.54300;
+     3.0                        2.13500;
+     3.0            "MWPC"      0.40400;
+     3.0                       -0.20200;
+     3.0            "Foc "      0.00000;
+   -10.             "LFOC"      2.00000     1.00000     0.00000     0.00100;
+   -10.             "LFOC"      4.00000     3.00000     0.00000     0.00100;
+   -10.             "MINS"      1.00000     1.00000     0.10000     0.10000;
+   -10.             "MINS"      3.00000     3.00000     0.10000     0.10000;
+     3.0            "CH1F"      1.07800;
+     3.0                        1.00000;
+     3.0                        1.00000;
+     3.0                        1.00000;
+     3.0                        1.00000;
+     3.0            "ENDP"      0.00000;
+   -13.             "MATX"     41.00000;
+0SENTINEL
+1TRANSPORT_RUN                                                                   
+
+ *BEAM*         1.   "BEAM"      7.00000 GEV 
+      0.000 M                                                              0.000   0.200 CM  
+                                                                           0.000   4.850 MR      0.000
+                                                                           0.000   0.200 CM      0.000  0.000
+                                                                           0.000  12.400 MR      0.000  0.000  0.000
+                                                                           0.000   0.000 CM      0.000  0.000  0.000  0.000
+                                                                           0.000   0.000 PC      0.000  0.000  0.000  0.000  0.000
+ *DRIFT*        3.   "PG3H"      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "^11."      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "TV7 "      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.               7.25000 M   
+      7.250 M                       3.522 CM     4.850 MR     8.992 CM    12.400 MR     0.000 CM     0.000 PC       0.998    1.000
+ *QUAD*         5.   "QDE1"      0.90000 M        -8.95183 KG       10.00000 CM   (   -2.75343 M   )
+      8.150 M                       4.542 CM    18.408 MR     8.691 CM    18.926 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *DRIFT*        3.               2.30000 M   
+     10.450 M                       8.775 CM    18.408 MR     4.339 CM    18.926 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *QUAD*         5.   "QFO2"      0.90000 M         9.95687 KG       10.00000 CM   (    2.76190 M   )
+     11.350 M                       8.866 CM    16.455 MR     3.308 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.987
+ *DRIFT*        3.               0.76000 M   
+     12.110 M                       7.615 CM    16.455 MR     2.956 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.984
+ *PARAM*       16.               4.    0.17000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ1"    180.00000 DEG
+     12.110 M                       7.615 CM    16.455 MR     2.956 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.984
+ *ROTAT*        2.   "BHZ1"      5.72958 DEG 
+     12.110 M                       7.615 CM    15.964 MR     2.956 CM     4.881 MR     0.000 CM     0.000 PC      -1.000   -0.985
+ *BEND*         4.   "BHZ1"      2.18000 M        14.99508 KG        0.00000      (    15.571 M   ,   8.021 DEG )
+     14.290 M                       4.072 CM    16.490 MR     1.916 CM     4.881 MR     0.819 CM     0.000 PC      -1.000   -0.964
+ *ROTAT*        2.   "BHZ1"      2.29183 DEG 
+     14.290 M                       4.072 CM    16.386 MR     1.916 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.965
+ *Z ROT*       20.   "BHZ1"   -180.00000 DEG
+     14.290 M                       4.072 CM    16.386 MR     1.916 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.965
+ *DRIFT*        3.               0.40200 M   
+     14.692 M                       3.414 CM    16.386 MR     1.726 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.956
+ *DRIFT*        3.   "STP1"      0.68000 M   
+     15.372 M                       2.300 CM    16.386 MR     1.409 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.934
+ *DRIFT*        3.               1.10400 M   
+     16.476 M                       0.493 CM    16.386 MR     0.922 CM     4.923 MR     0.819 CM     0.000 PC      -0.993   -0.838
+ *DRIFT*        3.               0.00000 M   
+     16.476 M                       0.493 CM    16.386 MR     0.922 CM     4.923 MR     0.819 CM     0.000 PC      -0.993   -0.838
+ *DRIFT*        3.   "MCH1"      0.90000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *FIT*         10.0  "FOCi"      2.   1.       0.00000 /0.00010        (  16.13646 )
+ *FIT*         10.2  "MINi"      1.   1.       0.10000 /0.10000        (   0.98656 )
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *DRIFT*        3.               0.23900 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *DRIFT*        3.               0.00000 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *DRIFT*        3.               0.60000 M   
+     18.215 M                       2.360 CM    16.386 MR     0.511 CM     4.923 MR     0.819 CM     0.000 PC       1.000    0.164
+ *FIT*         10.0  "FOCi"      4.   3.       0.00000 /0.00010        (   0.41184 )
+ *FIT*         10.2  "MINi"      3.   3.       0.10000 /0.10000        (   0.51063 )
+ *DRIFT*        3.              -0.60000 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *QUAD*         5.   "QFO3"      0.84000 M         7.50000 KG        5.00000 CM   (    2.00091 M   )
+     18.455 M                       2.351 CM     5.939 MR     0.649 CM     5.666 MR     0.819 CM     0.000 PC       0.998    0.738
+ *DRIFT*        3.               0.10000 M   
+     18.555 M                       2.411 CM     5.939 MR     0.692 CM     5.666 MR     0.819 CM     0.000 PC       0.998    0.774
+ *DRIFT*        3.   "drif"      0.55000 M   
+     19.105 M                       2.736 CM     5.939 MR     0.954 CM     5.666 MR     0.819 CM     0.000 PC       0.998    0.888
+ *Z ROT*       20.   "BHZ2"    180.00000 DEG
+     19.105 M                       2.736 CM     5.939 MR     0.954 CM     5.666 MR     0.819 CM     0.000 PC       0.998    0.888
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     19.105 M                       2.736 CM     6.042 MR     0.954 CM     5.636 MR     0.819 CM     0.000 PC       0.998    0.887
+ *BEND*         4.   "BHZ2"      2.60000 M        12.57265 KG        0.00000      (    18.572 M   ,   8.021 DEG )
+     21.705 M                       4.274 CM     5.777 MR     2.353 CM     5.636 MR     0.328 CM     0.000 PC       0.999    0.982
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     21.705 M                       4.274 CM     5.939 MR     2.353 CM     5.554 MR     0.328 CM     0.000 PC       0.999    0.982
+ *Z ROT*       20.   "BHZ2"   -180.00000 DEG
+     21.705 M                       4.274 CM     5.939 MR     2.353 CM     5.554 MR     0.328 CM     0.000 PC       0.999    0.982
+ *DRIFT*        3.               0.14000 M   
+     21.845 M                       4.357 CM     5.939 MR     2.429 CM     5.554 MR     0.328 CM     0.000 PC       0.999    0.983
+ *DRIFT*        3.   "drif"      2.00000 M   
+     23.845 M                       5.544 CM     5.939 MR     3.527 CM     5.554 MR     0.328 CM     0.000 PC       1.000    0.992
+ *DRIFT*        3.               0.83000 M   
+     24.675 M                       6.037 CM     5.939 MR     3.985 CM     5.554 MR     0.328 CM     0.000 PC       1.000    0.994
+ *DRIFT*        3.               0.08000 M   
+     24.755 M                       6.084 CM     5.939 MR     4.029 CM     5.554 MR     0.328 CM     0.000 PC       1.000    0.994
+ *PARAM*       16.               4.    0.26000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ3"    180.00000 DEG
+     24.755 M                       6.084 CM     5.939 MR     4.029 CM     5.554 MR     0.328 CM     0.000 PC       1.000    0.994
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     24.755 M                       6.084 CM     6.000 MR     4.029 CM     5.518 MR     0.328 CM     0.000 PC       1.000    0.994
+ *BEND*         4.   "bhz3"      1.16000 M        10.00000 KG        0.00000      (    23.349 M   ,   2.846 DEG )
+     25.915 M                       6.772 CM     5.863 MR     4.666 CM     5.518 MR     0.009 CM     0.000 PC       1.000    0.995
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     25.915 M                       6.772 CM     5.932 MR     4.666 CM     5.477 MR     0.009 CM     0.000 PC       1.000    0.995
+ *Z ROT*       20.   "BHZ3"   -180.00000 DEG
+     25.915 M                       6.772 CM     5.932 MR     4.666 CM     5.477 MR     0.009 CM     0.000 PC       1.000    0.995
+ *DRIFT*        3.   "drif"      0.72000 M   
+     26.635 M                       7.199 CM     5.932 MR     5.058 CM     5.477 MR     0.009 CM     0.000 PC       1.000    0.996
+ *QUAD*         5.   "QFO4"      1.16000 M         8.11469 KG       10.00000 CM   (    2.68497 M   )
+     27.795 M                       6.216 CM    22.216 MR     6.971 CM    28.806 MR     0.009 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     28.135 M                       5.461 CM    22.216 MR     7.951 CM    28.806 MR     0.009 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.   "MCV1"      0.58000 M   
+     28.715 M                       4.172 CM    22.216 MR     9.621 CM    28.806 MR     0.009 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     29.055 M                       3.417 CM    22.216 MR    10.601 CM    28.806 MR     0.009 CM     0.000 PC      -1.000    1.000
+ *QUAD*         5.   "QDE5"      1.16000 M       -10.01776 KG       10.00000 CM   (   -1.82826 M   )
+     30.215 M                       1.620 CM    10.258 MR    10.714 CM    26.944 MR     0.009 CM     0.000 PC      -0.998   -1.000
+ *DRIFT*        3.               0.62500 M   
+     30.840 M                       0.981 CM    10.258 MR     9.030 CM    26.944 MR     0.009 CM     0.000 PC      -0.995   -1.000
+ *Z ROT*       20.   "BVT1"     90.70439 DEG
+     30.840 M                       9.030 CM    26.942 MR     0.987 CM    10.263 MR     0.009 CM     0.000 PC      -1.000   -0.992
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     30.840 M                       9.030 CM    26.892 MR     0.987 CM    10.268 MR     0.009 CM     0.000 PC      -1.000   -0.992
+ *BEND*         4.   "BVT1"      1.18000 M         7.16525 KG        0.00000      (    32.587 M   ,   2.075 DEG )
+     32.020 M                       5.852 CM    26.975 MR     0.263 CM    10.268 MR     0.270 CM     0.000 PC      -1.000    0.883
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     32.020 M                       5.852 CM    26.942 MR     0.263 CM    10.267 MR     0.270 CM     0.000 PC      -1.000    0.883
+ *Z ROT*       20.   "BVT1"    -90.00000 DEG
+     32.020 M                       0.263 CM    10.267 MR     5.852 CM    26.942 MR     0.270 CM     0.000 PC       0.883   -1.000
+ *DRIFT*        3.               0.00000 M   
+     32.020 M                       0.263 CM    10.267 MR     5.852 CM    26.942 MR     0.270 CM     0.000 PC       0.883   -1.000
+ *DRIFT*        3.   "CH1I"      0.54300 M   
+     32.563 M                       0.800 CM    10.267 MR     4.389 CM    26.942 MR     0.270 CM     0.000 PC       0.988   -1.000
+ *DRIFT*        3.               2.13500 M   
+     34.698 M                       2.985 CM    10.267 MR     1.368 CM    26.942 MR     0.270 CM     0.000 PC       0.999    0.997
+ *DRIFT*        3.   "MWPC"      0.40400 M   
+     35.102 M                       3.399 CM    10.267 MR     2.455 CM    26.942 MR     0.270 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.              -0.20200 M   
+     34.900 M                       3.192 CM    10.267 MR     1.911 CM    26.942 MR     0.270 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.   "Foc "      0.00000 M   
+     34.900 M                       3.192 CM    10.267 MR     1.911 CM    26.942 MR     0.270 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.   "CH1F"      1.07800 M   
+     35.978 M                       4.298 CM    10.267 MR     4.814 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     36.978 M                       5.324 CM    10.267 MR     7.508 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     37.978 M                       6.351 CM    10.267 MR    10.202 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     38.978 M                       7.377 CM    10.267 MR    12.896 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     39.978 M                       8.404 CM    10.267 MR    15.590 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.   "ENDP"      0.00000 M   
+     39.978 M                       8.404 CM    10.267 MR    15.590 CM    26.942 MR     0.270 CM     0.000 PC       1.000    1.000
+0*LENGTH*         39.97799 M   
+1"FIT DE Q-CHAMP : FCH   "
+0  111
+     5.00           "QDE1" ;
+     5.00           "QFO2" ;
+   -10.             "FOCi" ;
+   -10.             "MINi" ;
+     5.01           "QFO3" ;
+     4.010          "bhz3" ;
+    10.0            "FCH " ;
+0*CORRECTIONS*
+  0.10000E+01 ( 0.10183E+07)   -0.2838   -0.5040
+  0.10000E+01 ( 0.13074E+02)    0.0008   -0.0037
+  0.10000E+01 ( 0.51128E-04)    0.0000    0.0000
+0*COVARIANCE  (FIT 0.38370E-05 )
+        0.000
+        0.539       0.005
+1FIT DE Q-CHAMP : FCH                                                            
+
+ *BEAM*         1.   "BEAM"      7.00000 GEV 
+      0.000 M                                                              0.000   0.200 CM  
+                                                                           0.000   4.850 MR      0.000
+                                                                           0.000   0.200 CM      0.000  0.000
+                                                                           0.000  12.400 MR      0.000  0.000  0.000
+                                                                           0.000   0.000 CM      0.000  0.000  0.000  0.000
+                                                                           0.000   0.000 PC      0.000  0.000  0.000  0.000  0.000
+ *DRIFT*        3.   "PG3H"      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "^11."      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "TV7 "      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.               7.25000 M   
+      7.250 M                       3.522 CM     4.850 MR     8.992 CM    12.400 MR     0.000 CM     0.000 PC       0.998    1.000
+ *QUAD*         5.   "QDE1"      0.90000 M        -8.95183 KG       10.00000 CM   (   -2.75343 M   )
+      8.150 M                       4.542 CM    18.408 MR     8.691 CM    18.926 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *DRIFT*        3.               2.30000 M   
+     10.450 M                       8.775 CM    18.408 MR     4.339 CM    18.926 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *QUAD*         5.   "QFO2"      0.90000 M         9.95687 KG       10.00000 CM   (    2.76190 M   )
+     11.350 M                       8.866 CM    16.455 MR     3.308 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.987
+ *DRIFT*        3.               0.76000 M   
+     12.110 M                       7.615 CM    16.455 MR     2.956 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.984
+ *PARAM*       16.               4.    0.17000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ1"    180.00000 DEG
+     12.110 M                       7.615 CM    16.455 MR     2.956 CM     4.702 MR     0.000 CM     0.000 PC      -1.000   -0.984
+ *ROTAT*        2.   "BHZ1"      5.72958 DEG 
+     12.110 M                       7.615 CM    15.964 MR     2.956 CM     4.881 MR     0.000 CM     0.000 PC      -1.000   -0.985
+ *BEND*         4.   "BHZ1"      2.18000 M        14.99508 KG        0.00000      (    15.571 M   ,   8.021 DEG )
+     14.290 M                       4.072 CM    16.490 MR     1.916 CM     4.881 MR     0.819 CM     0.000 PC      -1.000   -0.964
+ *ROTAT*        2.   "BHZ1"      2.29183 DEG 
+     14.290 M                       4.072 CM    16.386 MR     1.916 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.965
+ *Z ROT*       20.   "BHZ1"   -180.00000 DEG
+     14.290 M                       4.072 CM    16.386 MR     1.916 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.965
+ *DRIFT*        3.               0.40200 M   
+     14.692 M                       3.414 CM    16.386 MR     1.726 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.956
+ *DRIFT*        3.   "STP1"      0.68000 M   
+     15.372 M                       2.300 CM    16.386 MR     1.409 CM     4.923 MR     0.819 CM     0.000 PC      -1.000   -0.934
+ *DRIFT*        3.               1.10400 M   
+     16.476 M                       0.493 CM    16.386 MR     0.922 CM     4.923 MR     0.819 CM     0.000 PC      -0.993   -0.838
+ *DRIFT*        3.               0.00000 M   
+     16.476 M                       0.493 CM    16.386 MR     0.922 CM     4.923 MR     0.819 CM     0.000 PC      -0.993   -0.838
+ *DRIFT*        3.   "MCH1"      0.90000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.987 CM    16.386 MR     0.602 CM     4.923 MR     0.819 CM     0.000 PC       0.998   -0.547
+ *DRIFT*        3.               0.23900 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *DRIFT*        3.               0.00000 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *DRIFT*        3.               0.60000 M   
+     18.215 M                       2.360 CM    16.386 MR     0.511 CM     4.923 MR     0.819 CM     0.000 PC       1.000    0.164
+ *DRIFT*        3.              -0.60000 M   
+     17.615 M                       1.378 CM    16.386 MR     0.546 CM     4.923 MR     0.819 CM     0.000 PC       0.999   -0.388
+ *QUAD*         5.   "QFO3"      0.84000 M         7.21700 KG        5.00000 CM   (    2.07327 M   )
+     VARY CODE =  0 1        
+     18.455 M                       2.366 CM     6.308 MR     0.645 CM     5.610 MR     0.819 CM     0.000 PC       0.998    0.728
+ *DRIFT*        3.               0.10000 M   
+     18.555 M                       2.429 CM     6.308 MR     0.687 CM     5.610 MR     0.819 CM     0.000 PC       0.998    0.765
+ *DRIFT*        3.   "drif"      0.55000 M   
+     19.105 M                       2.775 CM     6.308 MR     0.944 CM     5.610 MR     0.819 CM     0.000 PC       0.998    0.884
+ *Z ROT*       20.   "BHZ2"    180.00000 DEG
+     19.105 M                       2.775 CM     6.308 MR     0.944 CM     5.610 MR     0.819 CM     0.000 PC       0.998    0.884
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     19.105 M                       2.775 CM     6.412 MR     0.944 CM     5.580 MR     0.819 CM     0.000 PC       0.999    0.882
+ *BEND*         4.   "BHZ2"      2.60000 M        12.57265 KG        0.00000      (    18.572 M   ,   8.021 DEG )
+     21.705 M                       4.408 CM     6.141 MR     2.326 CM     5.580 MR     0.316 CM     0.000 PC       0.999    0.982
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     21.705 M                       4.408 CM     6.308 MR     2.326 CM     5.499 MR     0.316 CM     0.000 PC       0.999    0.981
+ *Z ROT*       20.   "BHZ2"   -180.00000 DEG
+     21.705 M                       4.408 CM     6.308 MR     2.326 CM     5.499 MR     0.316 CM     0.000 PC       0.999    0.981
+ *DRIFT*        3.               0.14000 M   
+     21.845 M                       4.497 CM     6.308 MR     2.402 CM     5.499 MR     0.316 CM     0.000 PC       0.999    0.982
+ *DRIFT*        3.   "drif"      2.00000 M   
+     23.845 M                       5.758 CM     6.308 MR     3.488 CM     5.499 MR     0.316 CM     0.000 PC       1.000    0.992
+ *DRIFT*        3.               0.83000 M   
+     24.675 M                       6.281 CM     6.308 MR     3.941 CM     5.499 MR     0.316 CM     0.000 PC       1.000    0.993
+ *DRIFT*        3.               0.08000 M   
+     24.755 M                       6.331 CM     6.308 MR     3.985 CM     5.499 MR     0.316 CM     0.000 PC       1.000    0.994
+ *PARAM*       16.               4.    0.26000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ3"    180.00000 DEG
+     24.755 M                       6.331 CM     6.308 MR     3.985 CM     5.499 MR     0.316 CM     0.000 PC       1.000    0.994
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     24.755 M                       6.331 CM     6.369 MR     3.985 CM     5.465 MR     0.316 CM     0.000 PC       1.000    0.993
+ *BEND*         4.   "bhz3"      1.16000 M         9.49227 KG        0.00000      (    24.598 M   ,   2.702 DEG )
+     VARY CODE =  0 1 0      
+     25.915 M                       7.063 CM     6.240 MR     4.615 CM     5.465 MR     0.000 CM     0.000 PC       1.000    0.995
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     25.915 M                       7.063 CM     6.308 MR     4.615 CM     5.427 MR     0.000 CM     0.000 PC       1.000    0.995
+ *Z ROT*       20.   "BHZ3"   -180.00000 DEG
+     25.915 M                       7.063 CM     6.308 MR     4.615 CM     5.427 MR     0.000 CM     0.000 PC       1.000    0.995
+ *DRIFT*        3.   "drif"      0.72000 M   
+     26.635 M                       7.517 CM     6.308 MR     5.004 CM     5.427 MR     0.000 CM     0.000 PC       1.000    0.996
+ *FIT*         10.0  "FCH "     -1.   6.       0.00000 /0.00010        (   0.00000 )
+ *QUAD*         5.   "QFO4"      1.16000 M         8.11469 KG       10.00000 CM   (    2.68497 M   )
+     27.795 M                       6.502 CM    23.107 MR     6.898 CM    28.507 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     28.135 M                       5.717 CM    23.107 MR     7.867 CM    28.507 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.   "MCV1"      0.58000 M   
+     28.715 M                       4.377 CM    23.107 MR     9.520 CM    28.507 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     29.055 M                       3.591 CM    23.107 MR    10.489 CM    28.507 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *QUAD*         5.   "QDE5"      1.16000 M       -10.01776 KG       10.00000 CM   (   -1.82826 M   )
+     30.215 M                       1.733 CM    10.466 MR    10.602 CM    26.658 MR     0.000 CM     0.000 PC      -0.999   -1.000
+ *DRIFT*        3.               0.62500 M   
+     30.840 M                       1.081 CM    10.466 MR     8.936 CM    26.658 MR     0.000 CM     0.000 PC      -0.996   -1.000
+ *FIT*         10.0  "FCH "     -1.   6.       0.00000 /0.00010        (   0.00000 )
+ *Z ROT*       20.   "BVT1"     90.70439 DEG
+     30.840 M                       8.935 CM    26.657 MR     1.086 CM    10.470 MR     0.000 CM     0.000 PC      -1.000   -0.994
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     30.840 M                       8.935 CM    26.607 MR     1.086 CM    10.476 MR     0.000 CM     0.000 PC      -1.000   -0.994
+ *BEND*         4.   "BVT1"      1.18000 M         7.16525 KG        0.00000      (    32.587 M   ,   2.075 DEG )
+     32.020 M                       5.791 CM    26.689 MR     0.197 CM    10.476 MR     0.267 CM     0.000 PC      -1.000    0.794
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     32.020 M                       5.791 CM    26.657 MR     0.197 CM    10.475 MR     0.267 CM     0.000 PC      -1.000    0.794
+ *Z ROT*       20.   "BVT1"    -90.00000 DEG
+     32.020 M                       0.197 CM    10.475 MR     5.791 CM    26.657 MR     0.267 CM     0.000 PC       0.794   -1.000
+ *DRIFT*        3.               0.00000 M   
+     32.020 M                       0.197 CM    10.475 MR     5.791 CM    26.657 MR     0.267 CM     0.000 PC       0.794   -1.000
+ *DRIFT*        3.   "CH1I"      0.54300 M   
+     32.563 M                       0.735 CM    10.475 MR     4.344 CM    26.657 MR     0.267 CM     0.000 PC       0.987   -1.000
+ *DRIFT*        3.               2.13500 M   
+     34.698 M                       2.964 CM    10.475 MR     1.352 CM    26.657 MR     0.267 CM     0.000 PC       0.999    0.997
+ *DRIFT*        3.   "MWPC"      0.40400 M   
+     35.102 M                       3.387 CM    10.475 MR     2.428 CM    26.657 MR     0.267 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.              -0.20200 M   
+     34.900 M                       3.176 CM    10.475 MR     1.890 CM    26.657 MR     0.267 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.   "Foc "      0.00000 M   
+     34.900 M                       3.176 CM    10.475 MR     1.890 CM    26.657 MR     0.267 CM     0.000 PC       0.999    0.999
+ *DRIFT*        3.   "CH1F"      1.07800 M   
+     35.978 M                       4.304 CM    10.475 MR     4.762 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     36.978 M                       5.352 CM    10.475 MR     7.427 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     37.978 M                       6.399 CM    10.475 MR    10.092 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     38.978 M                       7.446 CM    10.475 MR    12.758 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.               1.00000 M   
+     39.978 M                       8.494 CM    10.475 MR    15.424 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+ *DRIFT*        3.   "ENDP"      0.00000 M   
+     39.978 M                       8.494 CM    10.475 MR    15.424 CM    26.657 MR     0.267 CM     0.000 PC       1.000    1.000
+0*LENGTH*         39.97799 M   
+1"AGAIN FIT DANS Q-CHAMP : FOCi      "
+0  111
+     5.00           "QFO3" ;
+     4.000          "bhz3" ;
+   -10.             "FCH " ;
+     5.01           "QDE1" ;
+     5.01           "QFO2" ;
+     5.01           "QFO4" ;
+     5.01           "QDE5" ;
+    10.0            "FOCi" ;
+    10.0            "LFOC" ;
+    10.2            "MINS" ;
+    10.2            "MINi" ;
+0*CORRECTIONS*
+  0.10000E+01 ( 0.29691E+11)    0.0857   -0.4338   -0.2638    0.5817
+  0.10000E+01 ( 0.31459E+09)    0.0091   -0.0429   -0.1033    0.2104
+  0.10000E+01 ( 0.62435E+06)    0.0001   -0.0004   -0.0110    0.0165
+  0.10000E+01 ( 0.16846E+03)    0.0000    0.0000   -0.0001    0.0001
+  0.10000E+01 ( 0.14557E+03)    0.0000    0.0000    0.0000    0.0000
+  0.10000E+01 ( 0.14557E+03)    0.0000    0.0000    0.0000    0.0000
+0*COVARIANCE  (FIT 0.14557E+03 )
+        0.000
+       -0.353       0.000
+        0.017      -0.096       0.000
+       -0.008       0.031      -0.459       0.000
+1AGAIN FIT DANS Q-CHAMP : FOCi                                                   
+
+ *BEAM*         1.   "BEAM"      7.00000 GEV 
+      0.000 M                                                              0.000   0.200 CM  
+                                                                           0.000   4.850 MR      0.000
+                                                                           0.000   0.200 CM      0.000  0.000
+                                                                           0.000  12.400 MR      0.000  0.000  0.000
+                                                                           0.000   0.000 CM      0.000  0.000  0.000  0.000
+                                                                           0.000   0.000 PC      0.000  0.000  0.000  0.000  0.000
+ *DRIFT*        3.   "PG3H"      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "^11."      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "TV7 "      0.00000 M   
+      0.000 M                       0.200 CM     4.850 MR     0.200 CM    12.400 MR     0.000 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.               7.25000 M   
+      7.250 M                       3.522 CM     4.850 MR     8.992 CM    12.400 MR     0.000 CM     0.000 PC       0.998    1.000
+ *QUAD*         5.   "QDE1"      0.90000 M        -8.85695 KG       10.00000 CM   (   -2.78442 M   )
+     VARY CODE =  0 1        
+      8.150 M                       4.536 CM    18.257 MR     8.705 CM    18.611 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *DRIFT*        3.               2.30000 M   
+     10.450 M                       8.734 CM    18.257 MR     4.426 CM    18.611 MR     0.000 CM     0.000 PC       1.000   -1.000
+ *QUAD*         5.   "QFO2"      0.90000 M         9.47980 KG       10.00000 CM   (    2.89271 M   )
+     VARY CODE =  0 1        
+     11.350 M                       8.892 CM    14.859 MR     3.406 CM     4.720 MR     0.000 CM     0.000 PC      -1.000   -0.988
+ *DRIFT*        3.               0.76000 M   
+     12.110 M                       7.762 CM    14.859 MR     3.053 CM     4.720 MR     0.000 CM     0.000 PC      -1.000   -0.985
+ *PARAM*       16.               4.    0.17000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ1"    180.00000 DEG
+     12.110 M                       7.762 CM    14.859 MR     3.053 CM     4.720 MR     0.000 CM     0.000 PC      -1.000   -0.985
+ *ROTAT*        2.   "BHZ1"      5.72958 DEG 
+     12.110 M                       7.762 CM    14.359 MR     3.053 CM     4.905 MR     0.000 CM     0.000 PC      -1.000   -0.986
+ *BEND*         4.   "BHZ1"      2.18000 M        14.99508 KG        0.00000      (    15.571 M   ,   8.021 DEG )
+     14.290 M                       4.567 CM    14.914 MR     2.006 CM     4.905 MR     0.864 CM     0.000 PC      -1.000   -0.968
+ *ROTAT*        2.   "BHZ1"      2.29183 DEG 
+     14.290 M                       4.567 CM    14.797 MR     2.006 CM     4.949 MR     0.864 CM     0.000 PC      -1.000   -0.968
+ *Z ROT*       20.   "BHZ1"   -180.00000 DEG
+     14.290 M                       4.567 CM    14.797 MR     2.006 CM     4.949 MR     0.864 CM     0.000 PC      -1.000   -0.968
+ *DRIFT*        3.               0.40200 M   
+     14.692 M                       3.972 CM    14.797 MR     1.814 CM     4.949 MR     0.864 CM     0.000 PC      -1.000   -0.961
+ *DRIFT*        3.   "STP1"      0.68000 M   
+     15.372 M                       2.966 CM    14.797 MR     1.494 CM     4.949 MR     0.864 CM     0.000 PC      -1.000   -0.942
+ *DRIFT*        3.               1.10400 M   
+     16.476 M                       1.333 CM    14.797 MR     0.996 CM     4.949 MR     0.864 CM     0.000 PC      -0.999   -0.864
+ *DRIFT*        3.               0.00000 M   
+     16.476 M                       1.333 CM    14.797 MR     0.996 CM     4.949 MR     0.864 CM     0.000 PC      -0.999   -0.864
+ *DRIFT*        3.   "MCH1"      0.90000 M   
+     17.376 M                       0.066 CM    14.797 MR     0.651 CM     4.949 MR     0.864 CM     0.000 PC       0.000   -0.638
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.066 CM    14.797 MR     0.651 CM     4.949 MR     0.864 CM     0.000 PC       0.000   -0.638
+ *FIT*         10.0  "FOCi"      2.   1.       0.00000 /0.00010        (   0.00001 )
+ *FIT*         10.2  "MINi"      1.   1.       0.10000 /0.10000        (   0.06556 )
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                       0.066 CM    14.797 MR     0.651 CM     4.949 MR     0.864 CM     0.000 PC       0.000   -0.638
+ *DRIFT*        3.               0.23900 M   
+     17.615 M                       0.360 CM    14.797 MR     0.582 CM     4.949 MR     0.864 CM     0.000 PC       0.983   -0.510
+ *DRIFT*        3.               0.00000 M   
+     17.615 M                       0.360 CM    14.797 MR     0.582 CM     4.949 MR     0.864 CM     0.000 PC       0.983   -0.510
+ *DRIFT*        3.               0.60000 M   
+     18.215 M                       1.243 CM    14.797 MR     0.501 CM     4.949 MR     0.864 CM     0.000 PC       0.999    0.000
+ *FIT*         10.0  "FOCi"      4.   3.       0.00000 /0.00010        (   0.00000 )
+ *FIT*         10.2  "MINi"      3.   3.       0.10000 /0.10000        (   0.50113 )
+ *DRIFT*        3.              -0.60000 M   
+     17.615 M                       0.360 CM    14.797 MR     0.582 CM     4.949 MR     0.864 CM     0.000 PC       0.983   -0.510
+ *QUAD*         5.   "QFO3"      0.84000 M         7.21700 KG        5.00000 CM   (    2.07327 M   )
+     18.455 M                       1.435 CM     9.984 MR     0.620 CM     5.223 MR     0.864 CM     0.000 PC       0.998    0.643
+ *DRIFT*        3.               0.10000 M   
+     18.555 M                       1.534 CM     9.984 MR     0.655 CM     5.223 MR     0.864 CM     0.000 PC       0.998    0.689
+ *DRIFT*        3.   "drif"      0.55000 M   
+     19.105 M                       2.083 CM     9.984 MR     0.878 CM     5.223 MR     0.864 CM     0.000 PC       0.999    0.841
+ *Z ROT*       20.   "BHZ2"    180.00000 DEG
+     19.105 M                       2.083 CM     9.984 MR     0.878 CM     5.223 MR     0.864 CM     0.000 PC       0.999    0.841
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     19.105 M                       2.083 CM    10.063 MR     0.878 CM     5.196 MR     0.864 CM     0.000 PC       0.999    0.839
+ *BEND*         4.   "BHZ2"      2.60000 M        12.57265 KG        0.00000      (    18.572 M   ,   8.021 DEG )
+     21.705 M                       4.669 CM     9.808 MR     2.141 CM     5.196 MR     0.391 CM     0.000 PC       1.000    0.975
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     21.705 M                       4.669 CM     9.984 MR     2.141 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.974
+ *Z ROT*       20.   "BHZ2"   -180.00000 DEG
+     21.705 M                       4.669 CM     9.984 MR     2.141 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.974
+ *DRIFT*        3.               0.14000 M   
+     21.845 M                       4.809 CM     9.984 MR     2.211 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.976
+ *DRIFT*        3.   "drif"      2.00000 M   
+     23.845 M                       6.805 CM     9.984 MR     3.219 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.989
+ *DRIFT*        3.               0.83000 M   
+     24.675 M                       7.634 CM     9.984 MR     3.640 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.991
+ *DRIFT*        3.               0.08000 M   
+     24.755 M                       7.714 CM     9.984 MR     3.680 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.991
+ *PARAM*       16.               4.    0.26000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ3"    180.00000 DEG
+     24.755 M                       7.714 CM     9.984 MR     3.680 CM     5.122 MR     0.391 CM     0.000 PC       1.000    0.991
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     24.755 M                       7.714 CM    10.058 MR     3.680 CM     5.091 MR     0.391 CM     0.000 PC       1.000    0.991
+ *BEND*         4.   "bhz3"      1.16000 M         9.49227 KG        0.00000      (    24.598 M   ,   2.702 DEG )
+     25.915 M                       8.871 CM     9.899 MR     4.266 CM     5.091 MR     0.000 CM     0.000 PC       1.000    0.993
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     25.915 M                       8.871 CM     9.984 MR     4.266 CM     5.055 MR     0.000 CM     0.000 PC       1.000    0.993
+ *Z ROT*       20.   "BHZ3"   -180.00000 DEG
+     25.915 M                       8.871 CM     9.984 MR     4.266 CM     5.055 MR     0.000 CM     0.000 PC       1.000    0.993
+ *DRIFT*        3.   "drif"      0.72000 M   
+     26.635 M                       9.590 CM     9.984 MR     4.628 CM     5.055 MR     0.000 CM     0.000 PC       1.000    0.994
+ *QUAD*         5.   "QFO4"      1.16000 M         7.73655 KG       10.00000 CM   (    2.80567 M   )
+     VARY CODE =  0 1        
+     27.795 M                       8.605 CM    26.342 MR     6.326 CM    25.338 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     28.135 M                       7.709 CM    26.342 MR     7.188 CM    25.338 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.   "MCV1"      0.58000 M   
+     28.715 M                       6.181 CM    26.342 MR     8.657 CM    25.338 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     29.055 M                       5.286 CM    26.342 MR     9.519 CM    25.338 MR     0.000 CM     0.000 PC      -1.000    1.000
+ *QUAD*         5.   "QDE5"      1.16000 M        -9.20906 KG       10.00000 CM   (   -2.00377 M   )
+     VARY CODE =  0 1        
+     30.215 M                       3.418 CM     7.272 MR     9.788 CM    20.893 MR     0.000 CM     0.000 PC      -0.999   -1.000
+ *DRIFT*        3.               0.62500 M   
+     30.840 M                       2.964 CM     7.272 MR     8.483 CM    20.893 MR     0.000 CM     0.000 PC      -0.999   -1.000
+ *Z ROT*       20.   "BVT1"     90.70439 DEG
+     30.840 M                       8.482 CM    20.891 MR     2.966 CM     7.276 MR     0.000 CM     0.000 PC      -1.000   -0.999
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     30.840 M                       8.482 CM    20.844 MR     2.966 CM     7.290 MR     0.000 CM     0.000 PC      -1.000   -0.999
+ *BEND*         4.   "BVT1"      1.18000 M         7.16525 KG        0.00000      (    32.587 M   ,   2.075 DEG )
+     32.020 M                       6.018 CM    20.925 MR     2.107 CM     7.290 MR     0.263 CM     0.000 PC      -1.000   -0.998
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     32.020 M                       6.018 CM    20.891 MR     2.107 CM     7.300 MR     0.263 CM     0.000 PC      -1.000   -0.998
+ *Z ROT*       20.   "BVT1"    -90.00000 DEG
+     32.020 M                       2.107 CM     7.300 MR     6.018 CM    20.891 MR     0.263 CM     0.000 PC      -0.998   -1.000
+ *DRIFT*        3.               0.00000 M   
+     32.020 M                       2.107 CM     7.300 MR     6.018 CM    20.891 MR     0.263 CM     0.000 PC      -0.998   -1.000
+ *DRIFT*        3.   "CH1I"      0.54300 M   
+     32.563 M                       1.711 CM     7.300 MR     4.884 CM    20.891 MR     0.263 CM     0.000 PC      -0.997   -1.000
+ *DRIFT*        3.               2.13500 M   
+     34.698 M                       0.199 CM     7.300 MR     0.438 CM    20.891 MR     0.263 CM     0.000 PC      -0.743   -0.963
+ *DRIFT*        3.   "MWPC"      0.40400 M   
+     35.102 M                       0.199 CM     7.300 MR     0.438 CM    20.891 MR     0.263 CM     0.000 PC       0.743    0.963
+ *DRIFT*        3.              -0.20200 M   
+     34.900 M                       0.133 CM     7.300 MR     0.119 CM    20.891 MR     0.263 CM     0.000 PC       0.000    0.000
+ *DRIFT*        3.   "Foc "      0.00000 M   
+     34.900 M                       0.133 CM     7.300 MR     0.119 CM    20.891 MR     0.263 CM     0.000 PC       0.000    0.000
+ *FIT*         10.0  "LFOC"      2.   1.       0.00000 /0.00100        (  -0.00002 )
+ *FIT*         10.0  "LFOC"      4.   3.       0.00000 /0.00100        (  -0.00001 )
+ *FIT*         10.2  "MINS"      1.   1.       0.10000 /0.10000        (   0.13294 )
+ *FIT*         10.2  "MINS"      3.   3.       0.10000 /0.10000        (   0.11870 )
+ *DRIFT*        3.   "CH1F"      1.07800 M   
+     35.978 M                       0.798 CM     7.300 MR     2.255 CM    20.891 MR     0.263 CM     0.000 PC       0.986    0.999
+ *DRIFT*        3.               1.00000 M   
+     36.978 M                       1.523 CM     7.300 MR     4.343 CM    20.891 MR     0.263 CM     0.000 PC       0.996    1.000
+ *DRIFT*        3.               1.00000 M   
+     37.978 M                       2.251 CM     7.300 MR     6.431 CM    20.891 MR     0.263 CM     0.000 PC       0.998    1.000
+ *DRIFT*        3.               1.00000 M   
+     38.978 M                       2.980 CM     7.300 MR     8.520 CM    20.891 MR     0.263 CM     0.000 PC       0.999    1.000
+ *DRIFT*        3.               1.00000 M   
+     39.978 M                       3.710 CM     7.300 MR    10.609 CM    20.891 MR     0.263 CM     0.000 PC       0.999    1.000
+ *DRIFT*        3.   "ENDP"      0.00000 M   
+     39.978 M                       3.710 CM     7.300 MR    10.609 CM    20.891 MR     0.263 CM     0.000 PC       0.999    1.000
+0*LENGTH*         39.97799 M   
+1"T10 test beam optics   "
+0  111
+     7.             "AXE "      0.00000     0.00000     0.00000     0.00000     0.00000     1.00000;
+   -17.             "seco" ;
+     5.00           "QDE1" ;
+     5.00           "QFO2" ;
+   -10.             "FOCi" ;
+   -10.             "MINi" ;
+     5.00           "QFO4" ;
+     5.00           "QDE5" ;
+   -10.             "LFOC" ;
+   -10.             "MINS" ;
+    13.             "MATX"     41.00000;
+1T10 test beam optics                                                            
+
+ *BEAM*         1.   "BEAM"      7.00000 GEV 
+      0.000 M                                                              0.000   0.200 CM  
+                                                                           0.000   4.850 MR      0.000
+                                                                           0.000   0.200 CM      0.000  0.000
+                                                                           0.000  12.400 MR      0.000  0.000  0.000
+                                                                           0.000   0.000 CM      0.000  0.000  0.000  0.000
+                                                                           0.000   0.000 PC      0.000  0.000  0.000  0.000  0.000
+ *AXIS SHIFT*   7.   "AXE "
+       0.00000 CM        0.00000 MR        0.00000 CM        0.00000 MR        0.00000 CM        1.00000 PC  
+      0.000 M   
+ *DRIFT*        3.   "PG3H"      0.00000 M   
+      0.000 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    0.200        4.850        0.200       12.400        0.000        0.000          0.000    0.000
+ *DRIFT*        3.   "^11."      0.00000 M   
+      0.000 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    0.200        4.850        0.200       12.400        0.000        0.000          0.000    0.000
+ *DRIFT*        3.   "TV7 "      0.00000 M   
+      0.000 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    0.200        4.850        0.200       12.400        0.000        0.000          0.000    0.000
+ *DRIFT*        3.               7.25000 M   
+      7.250 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    3.522        4.850        8.992       12.400        0.000        0.000          0.998    1.000
+ *QUAD*         5.   "QDE1"      0.90000 M        -8.85695 KG       10.00000 CM   (   -2.78442 M   )
+      8.150 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    4.536       18.257        8.705       18.611        0.000        0.000          1.000   -1.000
+ *DRIFT*        3.               2.30000 M   
+     10.450 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    8.734       18.257        4.426       18.611        0.000        0.000          1.000   -1.000
+ *QUAD*         5.   "QFO2"      0.90000 M         9.47980 KG       10.00000 CM   (    2.89271 M   )
+     11.350 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    8.892       14.859        3.406        4.720        0.000        0.000         -1.000   -0.988
+ *DRIFT*        3.               0.76000 M   
+     12.110 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    7.762       14.859        3.053        4.720        0.000        0.000         -1.000   -0.985
+ *PARAM*       16.               4.    0.17000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ1"    180.00000 DEG
+     12.110 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    7.762       14.859        3.053        4.720        0.000        0.000         -1.000   -0.985
+ *ROTAT*        2.   "BHZ1"      5.72958 DEG 
+     12.110 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR     0.000 CM     1.000 PC  
+                                    7.762       14.359        3.053        4.905        0.000        0.000         -1.000   -0.986
+ *BEND*         4.   "BHZ1"      2.18000 M        14.99508 KG        0.00000      (    15.571 M   ,   8.021 DEG )
+     14.290 M                       0.152 CM     1.395 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    4.567       14.914        2.006        4.905        0.864        0.000         -1.000   -0.968
+ *ROTAT*        2.   "BHZ1"      2.29183 DEG 
+     14.290 M                       0.152 CM     1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    4.567       14.797        2.006        4.949        0.864        0.000         -1.000   -0.968
+ *Z ROT*       20.   "BHZ1"   -180.00000 DEG
+     14.290 M                      -0.152 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    4.567       14.797        2.006        4.949        0.864        0.000         -1.000   -0.968
+ *DRIFT*        3.               0.40200 M   
+     14.692 M                      -0.209 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    3.972       14.797        1.814        4.949        0.864        0.000         -1.000   -0.961
+ *DRIFT*        3.   "STP1"      0.68000 M   
+     15.372 M                      -0.304 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    2.966       14.797        1.494        4.949        0.864        0.000         -1.000   -0.942
+ *DRIFT*        3.               1.10400 M   
+     16.476 M                      -0.458 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    1.333       14.797        0.996        4.949        0.864        0.000         -0.999   -0.864
+ *DRIFT*        3.               0.00000 M   
+     16.476 M                      -0.458 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    1.333       14.797        0.996        4.949        0.864        0.000         -0.999   -0.864
+ *DRIFT*        3.   "MCH1"      0.90000 M   
+     17.376 M                      -0.584 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.066       14.797        0.651        4.949        0.864        0.000          0.000   -0.638
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                      -0.584 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.066       14.797        0.651        4.949        0.864        0.000          0.000   -0.638
+ *DRIFT*        3.               0.00000 M   
+     17.376 M                      -0.584 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.066       14.797        0.651        4.949        0.864        0.000          0.000   -0.638
+ *DRIFT*        3.               0.23900 M   
+     17.615 M                      -0.618 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.360       14.797        0.582        4.949        0.864        0.000          0.983   -0.510
+ *DRIFT*        3.               0.00000 M   
+     17.615 M                      -0.618 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.360       14.797        0.582        4.949        0.864        0.000          0.983   -0.510
+ *DRIFT*        3.               0.60000 M   
+     18.215 M                      -0.702 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    1.243       14.797        0.501        4.949        0.864        0.000          0.999    0.000
+ *DRIFT*        3.              -0.60000 M   
+     17.615 M                      -0.618 CM    -1.399 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    0.360       14.797        0.582        4.949        0.864        0.000          0.983   -0.510
+ *QUAD*         5.   "QFO3"      0.84000 M         7.21700 KG        5.00000 CM   (    2.07327 M   )
+     18.455 M                      -0.597 CM     1.874 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    1.435        9.984        0.620        5.223        0.864        0.000          0.998    0.643
+ *DRIFT*        3.               0.10000 M   
+     18.555 M                      -0.578 CM     1.874 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    1.534        9.984        0.655        5.223        0.864        0.000          0.998    0.689
+ *DRIFT*        3.   "drif"      0.55000 M   
+     19.105 M                      -0.475 CM     1.874 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    2.083        9.984        0.878        5.223        0.864        0.000          0.999    0.841
+ *Z ROT*       20.   "BHZ2"    180.00000 DEG
+     19.105 M                       0.475 CM    -1.874 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    2.083        9.984        0.878        5.223        0.864        0.000          0.999    0.841
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     19.105 M                       0.475 CM    -1.856 MR     0.000 CM     0.000 MR    -0.007 CM     1.000 PC  
+                                    2.083       10.063        0.878        5.196        0.864        0.000          0.999    0.839
+ *BEND*         4.   "BHZ2"      2.60000 M        12.57265 KG        0.00000      (    18.572 M   ,   8.021 DEG )
+     21.705 M                       0.171 CM    -0.478 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    4.669        9.808        2.141        5.196        0.391        0.000          1.000    0.975
+ *ROTAT*        2.   "BHZ2"      4.01071 DEG 
+     21.705 M                       0.171 CM    -0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    4.669        9.984        2.141        5.122        0.391        0.000          1.000    0.974
+ *Z ROT*       20.   "BHZ2"   -180.00000 DEG
+     21.705 M                      -0.171 CM     0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    4.669        9.984        2.141        5.122        0.391        0.000          1.000    0.974
+ *DRIFT*        3.               0.14000 M   
+     21.845 M                      -0.165 CM     0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    4.809        9.984        2.211        5.122        0.391        0.000          1.000    0.976
+ *DRIFT*        3.   "drif"      2.00000 M   
+     23.845 M                      -0.070 CM     0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    6.805        9.984        3.219        5.122        0.391        0.000          1.000    0.989
+ *DRIFT*        3.               0.83000 M   
+     24.675 M                      -0.031 CM     0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    7.634        9.984        3.640        5.122        0.391        0.000          1.000    0.991
+ *DRIFT*        3.               0.08000 M   
+     24.755 M                      -0.027 CM     0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    7.714        9.984        3.680        5.122        0.391        0.000          1.000    0.991
+ *PARAM*       16.               4.    0.26000E+02
+ * G/2 *       16.               5.    0.70000E+01
+ *Z ROT*       20.   "BHZ3"    180.00000 DEG
+     24.755 M                       0.027 CM    -0.472 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    7.714        9.984        3.680        5.122        0.391        0.000          1.000    0.991
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     24.755 M                       0.027 CM    -0.471 MR     0.000 CM     0.000 MR    -0.048 CM     1.000 PC  
+                                    7.714       10.058        3.680        5.091        0.391        0.000          1.000    0.991
+ *BEND*         4.   "bhz3"      1.16000 M         9.49227 KG        0.00000      (    24.598 M   ,   2.702 DEG )
+     25.915 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.871        9.899        4.266        5.091        0.000        0.000          1.000    0.993
+ *ROTAT*        2.   "BHZ3"      1.35103 DEG 
+     25.915 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.871        9.984        4.266        5.055        0.000        0.000          1.000    0.993
+ *Z ROT*       20.   "BHZ3"   -180.00000 DEG
+     25.915 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.871        9.984        4.266        5.055        0.000        0.000          1.000    0.993
+ *DRIFT*        3.   "drif"      0.72000 M   
+     26.635 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    9.590        9.984        4.628        5.055        0.000        0.000          1.000    0.994
+ *QUAD*         5.   "QFO4"      1.16000 M         7.73655 KG       10.00000 CM   (    2.80567 M   )
+     27.795 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.605       26.342        6.326       25.338        0.000        0.000         -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     28.135 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    7.709       26.342        7.188       25.338        0.000        0.000         -1.000    1.000
+ *DRIFT*        3.   "MCV1"      0.58000 M   
+     28.715 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    6.181       26.342        8.657       25.338        0.000        0.000         -1.000    1.000
+ *DRIFT*        3.               0.34000 M   
+     29.055 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    5.286       26.342        9.519       25.338        0.000        0.000         -1.000    1.000
+ *QUAD*         5.   "QDE5"      1.16000 M        -9.20906 KG       10.00000 CM   (   -2.00377 M   )
+     30.215 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    3.418        7.272        9.788       20.893        0.000        0.000         -0.999   -1.000
+ *DRIFT*        3.               0.62500 M   
+     30.840 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    2.964        7.272        8.483       20.893        0.000        0.000         -0.999   -1.000
+ *Z ROT*       20.   "BVT1"     90.70439 DEG
+     30.840 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.482       20.891        2.966        7.276        0.000        0.000         -1.000   -0.999
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     30.840 M                       0.000 CM     0.000 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    8.482       20.844        2.966        7.290        0.000        0.000         -1.000   -0.999
+ *BEND*         4.   "BVT1"      1.18000 M         7.16525 KG        0.00000      (    32.587 M   ,   2.075 DEG )
+     32.020 M                       0.021 CM     0.362 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    6.018       20.925        2.107        7.290        0.263        0.000         -1.000   -0.998
+ *ROTAT*        2.   "BVT1"      1.03737 DEG 
+     32.020 M                       0.021 CM     0.362 MR     0.000 CM     0.000 MR    -0.049 CM     1.000 PC  
+                                    6.018       20.891        2.107        7.300        0.263        0.000         -1.000   -0.998
+ *Z ROT*       20.   "BVT1"    -90.00000 DEG
+     32.020 M                       0.000 CM     0.000 MR     0.021 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    2.107        7.300        6.018       20.891        0.263        0.000         -0.998   -1.000
+ *DRIFT*        3.               0.00000 M   
+     32.020 M                       0.000 CM     0.000 MR     0.021 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    2.107        7.300        6.018       20.891        0.263        0.000         -0.998   -1.000
+ *DRIFT*        3.   "CH1I"      0.54300 M   
+     32.563 M                       0.000 CM     0.000 MR     0.041 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    1.711        7.300        4.884       20.891        0.263        0.000         -0.997   -1.000
+ *DRIFT*        3.               2.13500 M   
+     34.698 M                       0.000 CM     0.000 MR     0.118 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    0.199        7.300        0.438       20.891        0.263        0.000         -0.743   -0.963
+ *DRIFT*        3.   "MWPC"      0.40400 M   
+     35.102 M                       0.000 CM     0.000 MR     0.133 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    0.199        7.300        0.438       20.891        0.263        0.000          0.743    0.963
+ *DRIFT*        3.              -0.20200 M   
+     34.900 M                       0.000 CM     0.000 MR     0.126 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    0.133        7.300        0.119       20.891        0.263        0.000          0.000    0.000
+ *DRIFT*        3.   "Foc "      0.00000 M   
+     34.900 M                       0.000 CM     0.000 MR     0.126 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    0.133        7.300        0.119       20.891        0.263        0.000          0.000    0.000
+ *DRIFT*        3.   "CH1F"      1.07800 M   
+     35.978 M                       0.000 CM     0.000 MR     0.165 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    0.798        7.300        2.255       20.891        0.263        0.000          0.986    0.999
+ *DRIFT*        3.               1.00000 M   
+     36.978 M                       0.000 CM     0.000 MR     0.201 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    1.523        7.300        4.343       20.891        0.263        0.000          0.996    1.000
+ *DRIFT*        3.               1.00000 M   
+     37.978 M                       0.000 CM     0.000 MR     0.237 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    2.251        7.300        6.431       20.891        0.263        0.000          0.998    1.000
+ *DRIFT*        3.               1.00000 M   
+     38.978 M                       0.000 CM     0.000 MR     0.273 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    2.980        7.300        8.520       20.891        0.263        0.000          0.999    1.000
+ *DRIFT*        3.               1.00000 M   
+     39.978 M                       0.000 CM     0.000 MR     0.310 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    3.710        7.300       10.609       20.891        0.263        0.000          0.999    1.000
+ *DRIFT*        3.   "ENDP"      0.00000 M   
+     39.978 M                       0.000 CM     0.000 MR     0.310 CM     0.362 MR    -0.049 CM     1.000 PC  
+                                    3.710        7.300       10.609       20.891        0.263        0.000          0.999    1.000
+0*LENGTH*         39.97799 M   
+1T10 test beam optics                                                                      TRANSPORT RUN14/02/06
+0POSITION TYPE      STRENGTH *         H O R I Z O N T A L      *           V E R T I C A L        *         D I S P E R S I O N     
+   METERS          T*M,T/M*M *     R11     R12     R21     R22  *     R33     R34     R43     R44  *     R16     R26     R36     R46 
+                    T/M**2*M *    MM/MM   MM/MR   MR/MM   MR/MR *    MM/MM   MM/MR   MR/MM   MR/MR *    MM/PC   MR/PC   MM/PC   MR/PC
+ ************************************************************************************************************************************
+    0.000  3  PG3H           *    1.000   0.000   0.000   1.000 *    1.000   0.000   0.000   1.000 *    0.000   0.000   0.000   0.000
+    0.000  3  ^11.           *    1.000   0.000   0.000   1.000 *    1.000   0.000   0.000   1.000 *    0.000   0.000   0.000   0.000
+    0.000  3  TV7            *    1.000   0.000   0.000   1.000 *    1.000   0.000   0.000   1.000 *    0.000   0.000   0.000   0.000
+    7.250  3                 *    1.000   7.250   0.000   1.000 *    1.000   7.250   0.000   1.000 *    0.000   0.000   0.000   0.000
+    8.150  5  QDE1   -7.9713 *    1.158   9.339   0.359   3.761 *    0.850   7.019  -0.324  -1.500 *    0.000   0.000   0.000   0.000
+   10.450  3                 *    1.984  17.991   0.359   3.761 *    0.105   3.569  -0.324  -1.500 *    0.000   0.000   0.000   0.000
+   11.350  5  QFO2    8.5318 *    1.972  18.315  -0.384  -3.060 *   -0.186   2.747  -0.339  -0.377 *    0.000   0.000   0.000   0.000
+   12.110  3                 *    1.680  15.990  -0.384  -3.060 *   -0.443   2.461  -0.339  -0.377 *    0.000   0.000   0.000   0.000
+   14.290  4  BHZ1    3.2689 *    0.853   9.409  -0.382  -3.047 *   -1.175   1.607  -0.333  -0.395 *   -1.524  -1.399   0.000   0.000
+   14.692  3                 *    0.699   8.184  -0.382  -3.047 *   -1.309   1.448  -0.333  -0.395 *   -2.086  -1.399   0.000   0.000
+   15.372  3  STP1           *    0.439   6.113  -0.382  -3.047 *   -1.536   1.179  -0.333  -0.395 *   -3.038  -1.399   0.000   0.000
+   16.476  3                 *    0.017   2.749  -0.382  -3.047 *   -1.903   0.742  -0.333  -0.395 *   -4.582  -1.399   0.000   0.000
+   16.476  3                 *    0.017   2.749  -0.382  -3.047 *   -1.903   0.742  -0.333  -0.395 *   -4.582  -1.399   0.000   0.000
+   17.376  3  MCH1           *   -0.327   0.007  -0.382  -3.047 *   -2.203   0.386  -0.333  -0.395 *   -5.842  -1.399   0.000   0.000
+   17.376  3                 *   -0.327   0.007  -0.382  -3.047 *   -2.203   0.386  -0.333  -0.395 *   -5.842  -1.399   0.000   0.000
+   17.376  3                 *   -0.327   0.007  -0.382  -3.047 *   -2.203   0.386  -0.333  -0.395 *   -5.842  -1.399   0.000   0.000
+   17.615  3                 *   -0.419  -0.721  -0.382  -3.047 *   -2.283   0.292  -0.333  -0.395 *   -6.176  -1.399   0.000   0.000
+   17.615  3                 *   -0.419  -0.721  -0.382  -3.047 *   -2.283   0.292  -0.333  -0.395 *   -6.176  -1.399   0.000   0.000
+   18.215  3                 *   -0.648  -2.549  -0.382  -3.047 *   -2.483   0.054  -0.333  -0.395 *   -7.016  -1.399   0.000   0.000
+   17.615  3                 *   -0.419  -0.721  -0.382  -3.047 *   -2.283   0.292  -0.333  -0.395 *   -6.176  -1.399   0.000   0.000
+   18.455  5  QFO3   12.1246 *   -0.629  -2.947  -0.100  -2.058 *   -3.100   0.001  -1.682  -0.322 *   -5.969   1.874   0.000   0.000
+   18.555  3                 *   -0.639  -3.153  -0.100  -2.058 *   -3.268  -0.031  -1.682  -0.322 *   -5.782   1.874   0.000   0.000
+   19.105  3  drif           *   -0.694  -4.285  -0.100  -2.058 *   -4.193  -0.209  -1.682  -0.322 *   -4.751   1.874   0.000   0.000
+   21.705  4  BHZ2    3.2689 *   -0.953  -9.619  -0.100  -2.058 *   -8.528  -1.044  -1.637  -0.318 *   -1.712   0.472   0.000   0.000
+   21.845  3                 *   -0.967  -9.907  -0.100  -2.058 *   -8.757  -1.089  -1.637  -0.318 *   -1.646   0.472   0.000   0.000
+   23.845  3  drif           *   -1.167 -14.023  -0.100  -2.058 *  -12.030  -1.724  -1.637  -0.318 *   -0.703   0.472   0.000   0.000
+   24.675  3                 *   -1.250 -15.732  -0.100  -2.058 *  -13.388  -1.988  -1.637  -0.318 *   -0.311   0.472   0.000   0.000
+   24.755  3                 *   -1.258 -15.896  -0.100  -2.058 *  -13.519  -2.013  -1.637  -0.318 *   -0.273   0.472   0.000   0.000
+   25.915  4  bhz3    1.1011 *   -1.374 -18.283  -0.100  -2.058 *  -15.405  -2.380  -1.612  -0.314 *    0.000   0.000   0.000   0.000
+   26.635  3  drif           *   -1.447 -19.765  -0.100  -2.058 *  -16.565  -2.606  -1.612  -0.314 *    0.000   0.000   0.000   0.000
+   27.795  5  QFO4    8.9744 *   -1.243 -17.734   0.437   5.428 *  -22.410  -3.601  -8.836  -1.464 *    0.000   0.000   0.000   0.000
+   28.135  3                 *   -1.095 -15.888   0.437   5.428 *  -25.414  -4.099  -8.836  -1.464 *    0.000   0.000   0.000   0.000
+   28.715  3  MCV1           *   -0.841 -12.740   0.437   5.428 *  -30.539  -4.948  -8.836  -1.464 *    0.000   0.000   0.000   0.000
+   29.055  3                 *   -0.693 -10.894   0.437   5.428 *  -33.543  -5.446  -8.836  -1.464 *    0.000   0.000   0.000   0.000
+   30.215  5  QDE5  -10.6825 *   -0.332  -7.046   0.212   1.497 *  -34.396  -5.616   7.431   1.184 *    0.000   0.000   0.000   0.000
+   30.840  3                 *   -0.199  -6.111   0.212   1.497 *  -29.751  -4.876   7.431   1.184 *    0.000   0.000   0.000   0.000
+   32.020  4  BVT1    0.8455 *    0.052  -4.341   0.213   1.502 *  -20.985  -3.479   7.431   1.184 *   -0.003  -0.004   0.214   0.362
+   32.020  3                 *    0.052  -4.341   0.213   1.502 *  -20.985  -3.479   7.431   1.184 *   -0.003  -0.004   0.214   0.362
+   32.563  3  CH1I           *    0.167  -3.526   0.213   1.502 *  -16.949  -2.836   7.431   1.184 *   -0.005  -0.004   0.410   0.362
+   34.698  3                 *    0.621  -0.319   0.213   1.502 *   -1.084  -0.307   7.431   1.184 *   -0.015  -0.004   1.183   0.362
+   35.102  3  MWPC           *    0.707   0.287   0.213   1.502 *    1.918   0.171   7.431   1.184 *   -0.016  -0.004   1.330   0.362
+   34.900  3                 *    0.664  -0.016   0.213   1.502 *    0.417  -0.068   7.431   1.184 *   -0.015  -0.004   1.257   0.362
+   34.900  3  Foc            *    0.664  -0.016   0.213   1.502 *    0.417  -0.068   7.431   1.184 *   -0.015  -0.004   1.257   0.362
+   35.978  3  CH1F           *    0.893   1.603   0.213   1.502 *    8.428   1.208   7.431   1.184 *   -0.020  -0.004   1.647   0.362
+   36.978  3                 *    1.105   3.105   0.213   1.502 *   15.859   2.393   7.431   1.184 *   -0.025  -0.004   2.009   0.362
+   37.978  3                 *    1.318   4.607   0.213   1.502 *   23.290   3.577   7.431   1.184 *   -0.029  -0.004   2.371   0.362
+   38.978  3                 *    1.530   6.109   0.213   1.502 *   30.721   4.761   7.431   1.184 *   -0.034  -0.004   2.733   0.362
+   39.978  3                 *    1.743   7.610   0.213   1.502 *   38.152   5.945   7.431   1.184 *   -0.038  -0.004   3.095   0.362
+   39.978  3  ENDP           *    1.743   7.610   0.213   1.502 *   38.152   5.945   7.431   1.184 *   -0.038  -0.004   3.095   0.362
